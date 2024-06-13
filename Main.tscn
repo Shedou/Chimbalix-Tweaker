@@ -247,6 +247,18 @@ theme = ExtResource( 2 )
 enabled_focus_mode = 0
 text = "Restart Thunar (Explorer)"
 
+[node name="clean_xsession" type="Button" parent="Main_Menu_Items/Base_Actions"]
+margin_left = 20.0
+margin_top = 230.0
+margin_right = 355.0
+margin_bottom = 270.0
+hint_tooltip = "Temporarily solves a typical Linux problem with an inappropriately large log file."
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Clean \".xsession-errors\" file..."
+
 [node name="drop_caches" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 395.0
 margin_top = 50.0
@@ -415,6 +427,7 @@ text = "Save"
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/clear_thumbcache" to="Main_Menu_Items/Base_Actions" method="_on_clear_thumbcache_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/restart_xfcepanel" to="Main_Menu_Items/Base_Actions" method="_on_restart_xfcepanel_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/restart_thunar" to="Main_Menu_Items/Base_Actions" method="_on_restart_thunar_pressed"]
+[connection signal="pressed" from="Main_Menu_Items/Base_Actions/clean_xsession" to="Main_Menu_Items/Base_Actions" method="_on_clean_xsession_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/drop_caches" to="Main_Menu_Items/Base_Actions" method="_on_drop_caches_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/drop_caches_all" to="Main_Menu_Items/Base_Actions" method="_on_drop_caches_all_pressed"]
 [connection signal="pressed" from="Window_Message/wm_close" to="Window_Message" method="_on_wm_close_pressed"]

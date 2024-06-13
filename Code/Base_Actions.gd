@@ -22,3 +22,6 @@ func _on_drop_caches_pressed():
 
 func _on_drop_caches_all_pressed():
 	code = OS.execute("terminal", ["-e", "pkexec "+exe_path+"/Scripts/drop-caches.sh 3"], false, output, false, false);
+
+func _on_clean_xsession_pressed():
+	code = OS.execute("terminal", ["-e", exe_path+"/Scripts/clean-x-errors-log.sh"], false, output, false, false);
