@@ -1,21 +1,27 @@
 extends Control
 
 const root :String = "/root/Main";
+var work_dir :String;
 
 var menu_items = {
 	"Base_Actions":root+"/Main_Menu_Items/Base_Actions",
+	"Settings":root+"/Main_Menu_Items/Settings",
 	"About":root+"/Main_Menu_Items/About"
 }
 var menu_buttons = {
 	"Base_Actions":root+"/Main_Menu/mm_base_actions",
+	"Settings":root+"/Main_Menu/mm_settings",
 	"About":root+"/Main_Menu/mm_about"
 }
 
-func _ready():
-	pass
+func on_ready():
+	work_dir = $"..".work_dir;
 
 func _on_mm_base_actions_pressed():
 	change_menu("Base_Actions");
+
+func _on_mm_settings_pressed():
+	change_menu("Settings");
 
 func _on_mm_about_pressed():
 	change_menu("About");
@@ -30,3 +36,4 @@ func change_menu(show_menu:String):
 func _on_4_pressed():
 	$"%Window_Message".show("ATTENTION!", "VERY IMPORTANT MESSAGE!");
 	
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Code/Window_Locale.gd" type="Script" id=1]
 [ext_resource path="res://Main_Theme.tres" type="Theme" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Code/Window_Message.gd" type="Script" id=7]
 [ext_resource path="res://Code/string.gd" type="Script" id=8]
 [ext_resource path="res://Code/About.gd" type="Script" id=9]
+[ext_resource path="res://Code/Main_Menu_Items.gd" type="Script" id=10]
+[ext_resource path="res://Code/Settings.gd" type="Script" id=11]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 4 )
@@ -131,7 +133,7 @@ text = "-"
 icon_align = 2
 expand_icon = true
 
-[node name="8" type="Button" parent="Main_Menu"]
+[node name="mm_settings" type="Button" parent="Main_Menu"]
 margin_left = 10.0
 margin_top = 430.0
 margin_right = 210.0
@@ -139,10 +141,9 @@ margin_bottom = 480.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 6 )
-disabled = true
 toggle_mode = true
 enabled_focus_mode = 0
-text = "-"
+text = "Settings"
 icon_align = 2
 expand_icon = true
 
@@ -173,6 +174,7 @@ expand_icon = true
 [node name="Main_Menu_Items" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+script = ExtResource( 10 )
 
 [node name="Base_Actions" type="Control" parent="Main_Menu_Items"]
 margin_left = 240.0
@@ -325,6 +327,32 @@ theme = ExtResource( 2 )
 enabled_focus_mode = 0
 text = "-"
 
+[node name="Settings" type="Control" parent="Main_Menu_Items"]
+visible = false
+margin_left = 240.0
+margin_top = 10.0
+margin_right = 990.0
+margin_bottom = 590.0
+script = ExtResource( 11 )
+
+[node name="about_background" type="ColorRect" parent="Main_Menu_Items/Settings"]
+margin_right = 750.0
+margin_bottom = 580.0
+color = Color( 0.117647, 0.117647, 0.117647, 1 )
+
+[node name="current_work_dir" type="LineEdit" parent="Main_Menu_Items/Settings"]
+margin_left = 10.0
+margin_top = 530.0
+margin_right = 740.0
+margin_bottom = 570.0
+focus_mode = 0
+theme = ExtResource( 2 )
+text = "Current executable folder"
+align = 1
+editable = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
 [node name="About" type="Control" parent="Main_Menu_Items"]
 visible = false
 margin_left = 240.0
@@ -338,18 +366,74 @@ margin_right = 750.0
 margin_bottom = 580.0
 color = Color( 0.117647, 0.117647, 0.117647, 1 )
 
-[node name="current_exe_path" type="LineEdit" parent="Main_Menu_Items/About"]
+[node name="TextEdit" type="TextEdit" parent="Main_Menu_Items/About"]
 margin_left = 10.0
+margin_top = 10.0
+margin_right = 740.0
+margin_bottom = 520.0
+theme = ExtResource( 2 )
+text = "-= Chimbalix Tweaker =- 
+
+ - GitHub:
+ https://github.com/Shedou/Chimbalix-Tweaker - ( MIT license )
+
+ - Godot Engine:
+https://godotengine.org - ( MIT license )
+
+ - Overclockers Blog:
+ https://overclockers.ru/blog/Hard-Workshop"
+readonly = true
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+smooth_scrolling = true
+wrap_enabled = true
+minimap_draw = true
+
+[node name="btn1" type="Button" parent="Main_Menu_Items/About"]
+margin_left = 10.0
+margin_top = 530.0
+margin_right = 240.0
+margin_bottom = 570.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 6 )
+disabled = true
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Not Used"
+icon_align = 2
+expand_icon = true
+
+[node name="btn2" type="Button" parent="Main_Menu_Items/About"]
+margin_left = 260.0
+margin_top = 530.0
+margin_right = 490.0
+margin_bottom = 570.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 6 )
+disabled = true
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Not Used"
+icon_align = 2
+expand_icon = true
+
+[node name="btn3" type="Button" parent="Main_Menu_Items/About"]
+margin_left = 510.0
 margin_top = 530.0
 margin_right = 740.0
 margin_bottom = 570.0
 focus_mode = 0
-theme = ExtResource( 2 )
-text = "Current executable folder"
-align = 1
-editable = false
-virtual_keyboard_enabled = false
-middle_mouse_paste_enabled = false
+mouse_default_cursor_shape = 2
+theme = ExtResource( 6 )
+disabled = true
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Not Used"
+icon_align = 2
+expand_icon = true
 
 [node name="Window_Locale" type="Control" parent="."]
 visible = false
@@ -423,6 +507,7 @@ text = "Save"
 [connection signal="pressed" from="Main_Menu/2" to="." method="_on_2_pressed"]
 [connection signal="pressed" from="Main_Menu/3" to="." method="_on_3_pressed"]
 [connection signal="pressed" from="Main_Menu/4" to="Main_Menu" method="_on_4_pressed"]
+[connection signal="pressed" from="Main_Menu/mm_settings" to="Main_Menu" method="_on_mm_settings_pressed"]
 [connection signal="pressed" from="Main_Menu/mm_about" to="Main_Menu" method="_on_mm_about_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/clear_thumbcache" to="Main_Menu_Items/Base_Actions" method="_on_clear_thumbcache_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/restart_xfcepanel" to="Main_Menu_Items/Base_Actions" method="_on_restart_xfcepanel_pressed"]

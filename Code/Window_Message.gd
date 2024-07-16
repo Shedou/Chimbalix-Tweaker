@@ -3,19 +3,22 @@ const root :String = "/root/Main";
 
 var code :int;
 var output :Array = [];
-var exe_path :String;
+var work_dir :String;
 
-func _ready():
-	exe_path = get_node(root).exe_path;
+func on_ready():
+	work_dir = $"..".work_dir;
 
 func show(title:String="Default Title", message:String="Default Message"):
 	if visible == false:
 		visible = true;
 		$wm_title.text = title;
-		$wm_message.text = message;
+		$wm_message.text = " - " + title + "\n" + message;
 	else:
-		$wm_message.text += "\n"+message;
-		if title != "+": $wm_title.text = title;
+		if title != "+":
+			$wm_title.text = title;
+			$wm_message.text += "\n\n" + " - " + title + "\n" + message;
+		else:
+			$wm_message.text += "\n" + message;
 	
 
 func _on_wm_close_pressed():
@@ -28,7 +31,7 @@ func _on_wm_save_pressed():
 	var date :String = str(Time.get_date_string_from_system());
 	var time :String = str(Time.get_time_string_from_system()); time = time.replace(":","-");
 
-	var save_path :String = exe_path + "/Saved_Info";
+	var save_path :String = work_dir + "/Saved_Info";
 	var full_path = str(save_path, "/", date, " - ", time, ".txt", " - ", $wm_title.text);
 	if not dir.dir_exists(save_path):
 		dir.make_dir(save_path);
