@@ -133,11 +133,21 @@ text = "-"
 icon_align = 2
 expand_icon = true
 
+[node name="mm_version" type="Label" parent="Main_Menu"]
+margin_left = 10.0
+margin_top = 435.0
+margin_right = 210.0
+margin_bottom = 465.0
+theme = ExtResource( 2 )
+text = "version"
+align = 1
+valign = 1
+
 [node name="mm_settings" type="Button" parent="Main_Menu"]
 margin_left = 10.0
-margin_top = 430.0
+margin_top = 480.0
 margin_right = 210.0
-margin_bottom = 480.0
+margin_bottom = 517.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 6 )
@@ -146,16 +156,6 @@ enabled_focus_mode = 0
 text = "Settings"
 icon_align = 2
 expand_icon = true
-
-[node name="mm_version" type="Label" parent="Main_Menu"]
-margin_left = 10.0
-margin_top = 495.0
-margin_right = 210.0
-margin_bottom = 525.0
-theme = ExtResource( 2 )
-text = "version"
-align = 1
-valign = 1
 
 [node name="mm_about" type="Button" parent="Main_Menu"]
 margin_left = 10.0
@@ -374,14 +374,22 @@ margin_bottom = 520.0
 theme = ExtResource( 2 )
 text = "-= Chimbalix Tweaker =- 
 
- - GitHub:
+Powered by Godot Engine.
+
+-= Authors =-
+
+> Chimbal
+-=> GitHub: https://github.com/Shedou
+-=> Blog: https://overclockers.ru/blog/Hard-Workshop
+
+-= Links =-
+
+ - Chimbalix Tweaker (GitHub):
  https://github.com/Shedou/Chimbalix-Tweaker - ( MIT license )
 
- - Godot Engine:
-https://godotengine.org - ( MIT license )
-
- - Overclockers Blog:
- https://overclockers.ru/blog/Hard-Workshop"
+ - Godot Engine v3.5.3:
+https://godotengine.org - ( MIT license, \"godotengine.org/license\" )
+"
 readonly = true
 virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
