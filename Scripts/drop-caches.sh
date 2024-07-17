@@ -8,12 +8,12 @@ if [ "$1" == "2" ]; then mode=2; fi
 if [ "$1" == "3" ]; then mode=3; fi
 
 echo "-= Drop caches (RAM) =-"
-echo "Command: sync && echo $mode | tee /proc/sys/vm/drop_caches"
+echo "Command: sync && echo $mode > /proc/sys/vm/drop_caches"
 echo "Memory before cleaning:"
 cat /proc/meminfo | grep -P 'Buffers|Cached|Slab'
 
 echo "Please wait."
-sync && echo $mode | tee /proc/sys/vm/drop_caches
+sync && echo $mode > /proc/sys/vm/drop_caches
 echo "Memory after cleaning:"
 cat /proc/meminfo | grep -P 'Buffers|Cached|Slab'
 read pause

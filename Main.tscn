@@ -220,7 +220,7 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 2 )
 enabled_focus_mode = 0
-text = "Clear Thumbnail Cache"
+text = "clear_thumbcache"
 
 [node name="restart_xfcepanel" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 20.0
@@ -231,7 +231,7 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 2 )
 enabled_focus_mode = 0
-text = "Restart Xfce4 Panel"
+text = "restart_xfcepanel"
 
 [node name="restart_thunar" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 20.0
@@ -242,7 +242,7 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 2 )
 enabled_focus_mode = 0
-text = "Restart Thunar (Explorer)"
+text = "restart_thunar"
 
 [node name="clean_xsession" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 20.0
@@ -254,7 +254,7 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 2 )
 enabled_focus_mode = 0
-text = "Clean \".xsession-errors\" file..."
+text = "clean_xsession"
 
 [node name="drop_caches" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 395.0
@@ -265,7 +265,7 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 2 )
 enabled_focus_mode = 0
-text = "Drop Buffers & Cache from RAM *"
+text = "drop_caches"
 
 [node name="drop_caches_all" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 395.0
@@ -276,7 +276,7 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 2 )
 enabled_focus_mode = 0
-text = "Drop All Buffers & Caches from RAM *"
+text = "drop_caches_all"
 
 [node name="6" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 395.0
@@ -365,26 +365,26 @@ color = Color( 0.117647, 0.117647, 0.117647, 1 )
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 740.0
-margin_bottom = 520.0
+margin_bottom = 490.0
 theme = ExtResource( 2 )
-text = "-= Chimbalix Tweaker =- 
-
+text = "-=== Chimbalix Tweaker ===- 
 Powered by Godot Engine.
 
--= Authors =-
+-=== Resources ===-
+- Font Noto Sans (Google, SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007)
+URL: https://fonts.google.com/noto/specimen/Noto+Sans/about
 
-> Chimbal
--=> GitHub: https://github.com/Shedou
--=> Blog: https://overclockers.ru/blog/Hard-Workshop
+-=== Links ===-
+- Chimbalix Tweaker (GitHub):
+URL: https://github.com/Shedou/Chimbalix-Tweaker - ( MIT license )
 
--= Links =-
+- Godot Engine v3.5.3:
+URL: https://godotengine.org - ( MIT license, \"godotengine.org/license\" )
 
- - Chimbalix Tweaker (GitHub):
- https://github.com/Shedou/Chimbalix-Tweaker - ( MIT license )
-
- - Godot Engine v3.5.3:
-https://godotengine.org - ( MIT license, \"godotengine.org/license\" )
-"
+-=== Authors ===-
+- Chimbal
+GitHub: https://github.com/Shedou
+Blog: https://overclockers.ru/blog/Hard-Workshop"
 readonly = true
 virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
@@ -392,6 +392,19 @@ drag_and_drop_selection_enabled = false
 smooth_scrolling = true
 wrap_enabled = true
 minimap_draw = true
+
+[node name="TranslatedBy" type="Label" parent="Main_Menu_Items/About"]
+margin_left = 10.0
+margin_top = 490.0
+margin_right = 740.0
+margin_bottom = 530.0
+mouse_filter = 0
+theme = ExtResource( 2 )
+text = "Translated by..."
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
 
 [node name="btn1" type="Button" parent="Main_Menu_Items/About"]
 margin_left = 10.0

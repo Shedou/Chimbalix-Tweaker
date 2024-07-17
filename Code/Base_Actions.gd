@@ -39,4 +39,13 @@ func localize():
 	
 	$restart_thunar.hint_tooltip = $"%str".Base_Actions.hint_restart_thunar;
 	$restart_thunar.text = $"%str".Base_Actions.text_restart_thunar;
+	
+	$clean_xsession.hint_tooltip = $"%str".Base_Actions.hint_clean_xsession;
+	$clean_xsession.text = $"%str".Base_Actions.text_clean_xsession;
+	
+	$drop_caches.hint_tooltip = $"%str".Base_Actions.hint_drop_caches;
+	$drop_caches.text = $"%str".Base_Actions.text_drop_caches;
+	
+	$drop_caches_all.hint_tooltip = $"%str".Base_Actions.hint_drop_caches_all;
+	$drop_caches_all.text = $"%str".Base_Actions.text_drop_caches_all;
 
