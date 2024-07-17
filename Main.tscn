@@ -193,10 +193,8 @@ margin_left = 20.0
 margin_top = 10.0
 margin_right = 730.0
 margin_bottom = 40.0
-hint_tooltip = "Подсказка"
 mouse_filter = 0
 theme = ExtResource( 2 )
-text = "* - Requires root rights. Hover your mouse over to get a hint."
 valign = 1
 
 [node name="base_actions_hint2" type="LineEdit" parent="Main_Menu_Items/Base_Actions"]
@@ -229,9 +227,6 @@ margin_left = 20.0
 margin_top = 110.0
 margin_right = 355.0
 margin_bottom = 150.0
-hint_tooltip = "Команда \"xfce4-panel -r\".
-Полезна при \"застревании\" элементов в меню \"Пуск\".
-( /Scripts/restart-xfce4-panel.sh )"
 focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 2 )
