@@ -11,7 +11,7 @@ read confirm
 if [ "$confirm" = "y" ] || [ "$confirm" = "yes" ]; then
 	if pgrep -i thunar >/dev/null; then echo "Killing thunar"; kill -9 $(pgrep -i thunar); fi
 	echo "Starting thunar daemon"
-	if nohup thunar --daemon &
+	if nohup thunar --daemon >/dev/null 2>&1 &
 	then echo "Complete"; else echo "Something went wrong..."; fi
 else echo "Abort."; fi
 
