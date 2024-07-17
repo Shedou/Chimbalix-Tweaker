@@ -18,11 +18,11 @@ func _ready():
 	if (args != []): work_dir = args[0];
 	else:
 		work_dir = "WARNING";
-		$"%Window_Message".show($"%str".base_capt.warning, $"%str".main.work_dir_arg_not_found);
-		$"%Window_Message".show("+", $"%str".main.work_dir_arg_not_found_tip);
+		$"%Window_Message".show($"%str".base.capt_warning, $"%str".base.work_dir_arg_not_found);
+		$"%Window_Message".show("+", $"%str".base.work_dir_arg_not_found_tip);
 	
 	$Main_Menu/mm_version.text = version;
-	$"%Window_Message".show($"%str".base_capt.attention, $"%str".main.attention);
+	$"%Window_Message".show($"%str".base.capt_attention, $"%str".base.attention);
 	
 	work_dir_set();
 	
@@ -56,8 +56,8 @@ func check_OS():
 		OS_name.full = str(temp_output[0]); OS_name.full = OS_name.full.replace("\n","");
 	
 	if OS_name.id != "Chimbalix":
-		$"%Window_Message".show($"%str".base_capt.attention, $"%str".main.not_designed);
-		$"%Window_Message".show("+", $"%str".main.current_os+":  "+OS_name.full);
+		$"%Window_Message".show($"%str".base.capt_attention, $"%str".base.not_designed);
+		$"%Window_Message".show("+", $"%str".base.current_os+":  "+OS_name.full);
 		
 
 
