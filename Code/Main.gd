@@ -68,3 +68,6 @@ func _on_2_pressed():
 
 func _on_3_pressed():
 	$Window_Locale.save_locale("f");
+	
+func _on_4_pressed():
+	$"%Window_Message".show("ATTENTION!", "VERY IMPORTANT MESSAGE!");

@@ -32,8 +32,5 @@ func change_menu(show_menu:String):
 		get_node(menu_buttons[chi_item]).pressed = false;
 	get_node(menu_items[show_menu]).visible = true;
 	get_node(menu_buttons[show_menu]).pressed = true;
-
-func _on_4_pressed():
-	$"%Window_Message".show("ATTENTION!", "VERY IMPORTANT MESSAGE!");
 	
 

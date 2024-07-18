@@ -54,9 +54,10 @@ margin_bottom = 120.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 6 )
+disabled = true
 toggle_mode = true
 enabled_focus_mode = 0
-text = "Change Font"
+text = "-"
 icon_align = 2
 expand_icon = true
 
@@ -68,9 +69,10 @@ margin_bottom = 180.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 6 )
+disabled = true
 toggle_mode = true
 enabled_focus_mode = 0
-text = "- save"
+text = "-"
 icon_align = 2
 expand_icon = true
 
@@ -82,9 +84,10 @@ margin_bottom = 240.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 6 )
+disabled = true
 toggle_mode = true
 enabled_focus_mode = 0
-text = "message"
+text = "-"
 icon_align = 2
 expand_icon = true
 
@@ -195,21 +198,8 @@ margin_right = 730.0
 margin_bottom = 40.0
 mouse_filter = 0
 theme = ExtResource( 2 )
+text = "hint_base_actions_hint"
 valign = 1
-
-[node name="base_actions_hint2" type="LineEdit" parent="Main_Menu_Items/Base_Actions"]
-unique_name_in_owner = true
-margin_left = 10.0
-margin_top = 530.0
-margin_right = 740.0
-margin_bottom = 570.0
-focus_mode = 0
-theme = ExtResource( 2 )
-text = "test"
-align = 1
-editable = false
-virtual_keyboard_enabled = false
-middle_mouse_paste_enabled = false
 
 [node name="clear_thumbcache" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 20.0
@@ -323,7 +313,6 @@ enabled_focus_mode = 0
 text = "-"
 
 [node name="Settings" type="Control" parent="Main_Menu_Items"]
-visible = false
 margin_left = 240.0
 margin_top = 10.0
 margin_right = 990.0
@@ -347,6 +336,66 @@ align = 1
 editable = false
 virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
+
+[node name="base_actions_hint2" type="LineEdit" parent="Main_Menu_Items/Settings"]
+unique_name_in_owner = true
+margin_left = 10.0
+margin_top = 480.0
+margin_right = 740.0
+margin_bottom = 520.0
+focus_mode = 0
+theme = ExtResource( 2 )
+text = "test"
+align = 1
+editable = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
+[node name="Label" type="Label" parent="Main_Menu_Items/Settings"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 740.0
+margin_bottom = 40.0
+theme = ExtResource( 2 )
+text = "Test"
+align = 1
+valign = 1
+
+[node name="2" type="Button" parent="Main_Menu_Items/Settings"]
+margin_left = 10.0
+margin_top = 60.0
+margin_right = 160.0
+margin_bottom = 100.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Change Font"
+expand_icon = true
+
+[node name="3" type="Button" parent="Main_Menu_Items/Settings"]
+margin_left = 170.0
+margin_top = 60.0
+margin_right = 320.0
+margin_bottom = 100.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "- save locale"
+expand_icon = true
+
+[node name="4" type="Button" parent="Main_Menu_Items/Settings"]
+margin_left = 10.0
+margin_top = 430.0
+margin_right = 160.0
+margin_bottom = 470.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Test message"
+expand_icon = true
 
 [node name="About" type="Control" parent="Main_Menu_Items"]
 visible = false
@@ -520,9 +569,6 @@ enabled_focus_mode = 0
 text = "Save"
 
 [connection signal="pressed" from="Main_Menu/mm_base_actions" to="Main_Menu" method="_on_mm_base_actions_pressed"]
-[connection signal="pressed" from="Main_Menu/2" to="." method="_on_2_pressed"]
-[connection signal="pressed" from="Main_Menu/3" to="." method="_on_3_pressed"]
-[connection signal="pressed" from="Main_Menu/4" to="Main_Menu" method="_on_4_pressed"]
 [connection signal="pressed" from="Main_Menu/mm_settings" to="Main_Menu" method="_on_mm_settings_pressed"]
 [connection signal="pressed" from="Main_Menu/mm_about" to="Main_Menu" method="_on_mm_about_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/clear_thumbcache" to="Main_Menu_Items/Base_Actions" method="_on_clear_thumbcache_pressed"]
@@ -531,5 +577,8 @@ text = "Save"
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/clean_xsession" to="Main_Menu_Items/Base_Actions" method="_on_clean_xsession_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/drop_caches" to="Main_Menu_Items/Base_Actions" method="_on_drop_caches_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/drop_caches_all" to="Main_Menu_Items/Base_Actions" method="_on_drop_caches_all_pressed"]
+[connection signal="pressed" from="Main_Menu_Items/Settings/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="Main_Menu_Items/Settings/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="Main_Menu_Items/Settings/4" to="." method="_on_4_pressed"]
 [connection signal="pressed" from="Window_Message/wm_close" to="Window_Message" method="_on_wm_close_pressed"]
 [connection signal="pressed" from="Window_Message/wm_save" to="Window_Message" method="_on_wm_save_pressed"]
