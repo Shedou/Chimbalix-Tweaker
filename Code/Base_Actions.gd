@@ -27,6 +27,9 @@ func _on_drop_caches_all_pressed():
 func _on_clean_xsession_pressed():
 	code = OS.execute("terminal", ["-e", work_dir+"/Scripts/clean-x-errors-log.sh"], false, output, false, false);
 
+func _on_fix_media_rights_pressed():
+	code = OS.execute("terminal", ["-e", work_dir+"/Scripts/fix-media-rights.sh"], false, output, false, false);
+
 func localize():
 	$base_actions_hint.hint_tooltip = $"%str".Base_Actions.hint_base_actions_hint;
 	$base_actions_hint.text = $"%str".Base_Actions.text_base_actions_hint;
@@ -48,4 +51,5 @@ func localize():
 	
 	$drop_caches_all.hint_tooltip = $"%str".Base_Actions.hint_drop_caches_all;
 	$drop_caches_all.text = $"%str".Base_Actions.text_drop_caches_all;
+
 

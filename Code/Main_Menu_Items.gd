@@ -8,3 +8,4 @@ func on_ready():
 	$Settings.on_ready();
 	$About.on_ready();
 
+

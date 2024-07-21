@@ -323,7 +323,7 @@ theme = ExtResource( 2 )
 enabled_focus_mode = 0
 text = "drop_caches_all"
 
-[node name="6" type="Button" parent="Main_Menu_Items/Base_Actions"]
+[node name="fix_media_rights" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 395.0
 margin_top = 170.0
 margin_right = 730.0
@@ -332,7 +332,7 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 2 )
 enabled_focus_mode = 0
-text = "-"
+text = "Fix \"/media/USER\" folder rights*"
 
 [node name="7" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 395.0
@@ -666,6 +666,7 @@ text = "Save"
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/clean_xsession" to="Main_Menu_Items/Base_Actions" method="_on_clean_xsession_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/drop_caches" to="Main_Menu_Items/Base_Actions" method="_on_drop_caches_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/drop_caches_all" to="Main_Menu_Items/Base_Actions" method="_on_drop_caches_all_pressed"]
+[connection signal="pressed" from="Main_Menu_Items/Base_Actions/fix_media_rights" to="Main_Menu_Items/Base_Actions" method="_on_fix_media_rights_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Settings/2" to="." method="_on_2_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Settings/3" to="." method="_on_3_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Settings/4" to="." method="_on_4_pressed"]
