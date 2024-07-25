@@ -51,5 +51,8 @@ func localize():
 	
 	$drop_caches_all.hint_tooltip = $"%str".Base_Actions.hint_drop_caches_all;
 	$drop_caches_all.text = $"%str".Base_Actions.text_drop_caches_all;
+	
+	$fix_media_rights.hint_tooltip = $"%str".Base_Actions.hint_fix_media_rights;
+	$fix_media_rights.text = $"%str".Base_Actions.text_fix_media_rights;
 
 

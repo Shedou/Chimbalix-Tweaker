@@ -33,6 +33,8 @@ var Base_Actions : Dictionary = {
 	"hint_drop_caches":"Saves data to disks and clears buffers/cache (pagecache) from RAM.\nCommand: sync && echo 1 > tee /proc/sys/vm/drop_caches",
 	"text_drop_caches_all":"Drop Buffers/Cache/Slab from RAM *",
 	"hint_drop_caches_all":"Saves data to disks and clears beffers/cache/slab (slab objects and pagecache) from RAM.\nCommand: sync && echo 3 > tee /proc/sys/vm/drop_caches",
+	"text_fix_media_rights":"Fix \"/media/USER\" folder rights*",
+	"hint_fix_media_rights":"This solves problems with the operation of local repositories\nlocated outside the Linux root directory (on an external HDD for example).",
 	#"text_":"",
 	#"hint_":"",
 	};
