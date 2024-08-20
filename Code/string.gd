@@ -23,7 +23,7 @@ var Base_Actions : Dictionary = {
 	"hint_base_actions_hint":"Tooltip",
 	"text_clear_thumbcache":"Clear Thumbnail Cache",
 	"hint_clear_thumbcache":"Clear the image preview cache located in:\n\"/home/USER_FOLDER/.cache/thumbnails/\".",
-	"text_restart_xfcepanel":"Restart Xfce4 Panel",
+	"text_restart_xfcepanel":"Restart Xfce4 Panel (Task Bar)",
 	"hint_restart_xfcepanel":"Command \"xfce4-panel -r\".\nUseful when items get stuck in the Start menu.",
 	"text_restart_thunar":"Restart Thunar (Explorer)",
 	"hint_restart_thunar":"Closes all \"thunar\" processes and starts again with the command:\nnohup thunar --daemon >/dev/null 2>&1 &",
