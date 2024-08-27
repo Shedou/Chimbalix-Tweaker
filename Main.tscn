@@ -334,7 +334,7 @@ theme = ExtResource( 2 )
 enabled_focus_mode = 0
 text = "Fix \"/media/USER\" folder rights*"
 
-[node name="7" type="Button" parent="Main_Menu_Items/Base_Actions"]
+[node name="change_cpu_perf" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 395.0
 margin_top = 230.0
 margin_right = 730.0
@@ -343,9 +343,9 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 2 )
 enabled_focus_mode = 0
-text = "-"
+text = "change_cpu_perf_ondemand"
 
-[node name="8" type="Button" parent="Main_Menu_Items/Base_Actions"]
+[node name="8change_cpu_perf_performance" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 395.0
 margin_top = 290.0
 margin_right = 730.0
@@ -354,7 +354,7 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource( 2 )
 enabled_focus_mode = 0
-text = "-"
+text = "8change_cpu_perf_performance"
 
 [node name="9" type="Button" parent="Main_Menu_Items/Base_Actions"]
 margin_left = 395.0
@@ -667,6 +667,8 @@ text = "Save"
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/drop_caches" to="Main_Menu_Items/Base_Actions" method="_on_drop_caches_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/drop_caches_all" to="Main_Menu_Items/Base_Actions" method="_on_drop_caches_all_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Base_Actions/fix_media_rights" to="Main_Menu_Items/Base_Actions" method="_on_fix_media_rights_pressed"]
+[connection signal="pressed" from="Main_Menu_Items/Base_Actions/change_cpu_perf" to="Main_Menu_Items/Base_Actions" method="_on_change_cpu_perf_pressed"]
+[connection signal="pressed" from="Main_Menu_Items/Base_Actions/8change_cpu_perf_performance" to="Main_Menu_Items/Base_Actions" method="_on_8change_cpu_perf_performance_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Settings/2" to="." method="_on_2_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Settings/3" to="." method="_on_3_pressed"]
 [connection signal="pressed" from="Main_Menu_Items/Settings/4" to="." method="_on_4_pressed"]

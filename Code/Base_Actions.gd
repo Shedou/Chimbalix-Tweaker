@@ -30,6 +30,12 @@ func _on_clean_xsession_pressed():
 func _on_fix_media_rights_pressed():
 	code = OS.execute("terminal", ["-e", work_dir+"/Scripts/fix-media-rights.sh"], false, output, false, false);
 
+func _on_change_cpu_perf_pressed():
+	code = OS.execute("terminal", ["-e", work_dir+"/Scripts/change-cpu-profile.sh ondemand"], false, output, false, false);
+
+func _on_8change_cpu_perf_performance_pressed():
+	code = OS.execute("terminal", ["-e", work_dir+"/Scripts/change-cpu-profile.sh performance"], false, output, false, false);
+
 func localize():
 	$base_actions_hint.hint_tooltip = $"%str".Base_Actions.hint_base_actions_hint;
 	$base_actions_hint.text = $"%str".Base_Actions.text_base_actions_hint;

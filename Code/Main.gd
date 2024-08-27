@@ -1,6 +1,6 @@
 extends Node2D
 # Версия
-const version :String = "Chimbalix Tweaker v1.0a";
+const version :String = "Chimbalix Tweaker v1.0b";
 
 # База
 var OS_name :Dictionary = {"id":"", "release":"", "codename":"", "full":""};
